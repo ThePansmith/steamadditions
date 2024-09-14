@@ -4,6 +4,8 @@ import com.gregtechceu.gtceu.api.data.chemical.material.stack.MaterialStack;
 
 import com.pansmith.steamadditions.common.data.SAMachines;
 
+import java.util.function.Consumer;
+
 public class SARecyclingRecipes {
 
   public static void init(Consumer<FinishedRecipe> provider) {
