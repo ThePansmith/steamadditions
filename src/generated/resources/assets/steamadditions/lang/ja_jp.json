@@ -1,0 +1,6 @@
+{
+  "block.steamadditions.steam_foundry": "蒸気式鋳造炉",
+  "block.steamadditions.steam_separator": "蒸気式分離機",
+  "block.steamadditions.steam_foundry.tooltip" : "マルチスメルターと混同しないでね",
+  "block.steamadditions.steam_separator.tooltip" : "埃を最大限に活用するのに最適"
+}
