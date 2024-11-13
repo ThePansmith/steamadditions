@@ -82,6 +82,13 @@ repositories {
             includeGroup "dev.latvian.mods"
         }
     }
+    maven {
+        name = 'GTCEu Maven'
+        url = 'https://maven.gtceu.com'
+        content {
+            includeGroup 'com.gregtechceu.gtceu'
+        }
+    }
     maven { // Registrate
         url = "https://maven.tterrag.com/"
         content {
