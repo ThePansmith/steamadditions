@@ -105,7 +105,6 @@ public class SAMachines {
                 .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
                 .workableTieredHullRenderer(GTCEu.id("block/machines/" + name))
                 .tooltips(workableTiered(tier, GTValues.V[tier], GTValues.V[tier] * 64, recipeType, tankScalingFunction.apply(tier), true))
-                .compassNode(name)
                 .register(), tiers);
     }
 
@@ -132,7 +131,7 @@ public class SAMachines {
     }
 
     public static Component explosion() {
-        if (ConfigHolder.INSTANCE.machines.doTerrainExplosion)
+        if (ConfigHolder.INSTANCE.machines.shouldWeatherOrTerrainExplosion)
             return Component.translatable("gtceu.universal.tooltip.terrain_resist");
         return null;
     }
