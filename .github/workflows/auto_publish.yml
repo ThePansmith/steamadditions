@@ -7,7 +7,7 @@ on:
         description: 'release type'
         required: true
         type: choice
-        default: 'beta'
+        default: 'release'
         options:
           - 'release'
           - 'beta'
@@ -60,7 +60,7 @@ jobs:
         name: Get Version
         id: var
         run: |
-          MESSAGE=$(ls build/libs/* | grep sources.jar -v | grep shadow.jar -v | awk -F 'susy-|.jar' '{print $2}')
+          MESSAGE=$(ls build/libs/* | grep sources.jar -v | grep shadow.jar -v | awk -F 'steamadditions-|.jar' '{print $2}')
           echo version=$MESSAGE >> $GITHUB_OUTPUT
       - if: ${{ inputs.publishCurseForgeAndModrinth }}
         name: mc-publish
@@ -68,7 +68,7 @@ jobs:
         with:
           # Only include this section if you wish to publish
           # your assets on Modrinth.
-          modrinth-id: nil
+          modrinth-id: 9oXUanKe
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           # Only include this section if you wish to publish
@@ -79,7 +79,7 @@ jobs:
           files: |
             build/libs/!(*-@(dev|sources|javadoc|dev-shadow)).jar
             build/libs/*-@(dev|sources|javadoc|dev-shadow).jar
-          name: SuSymCore ${{ steps.var.outputs.version }}
+          name: SteamAdditions ${{ steps.var.outputs.version }}
           version: mc${{ steps.var.outputs.version }}
           version-type: ${{ inputs.releaseType }}
           changelog-file: CHANGELOG.*
@@ -87,7 +87,7 @@ jobs:
           loaders: |
             forge
           game-versions: |
-            ${{ github.ref_name }}
+             1.20.1
           dependencies: |
             gtceu{modrinth:7tG215v7}{curseforge:890405}
           game-version-filter: none
