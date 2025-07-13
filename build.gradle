@@ -121,7 +121,7 @@ repositories {
         }
     }
     maven {
-        url "https://maven.saps.dev/snapshots"
+        url "https://maven.latvian.dev/snapshots"
         content {
             includeGroup "dev.latvian.mods"
             includeGroup "dev.ftb.mods"
