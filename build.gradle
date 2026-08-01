@@ -70,10 +70,6 @@ sourceSets {
 repositories {
     mavenCentral()
     maven {
-        name 'FirstDarkDev'
-        url "https://maven.firstdarkdev.xyz/snapshots/"
-    }
-    maven {
         name = 'ParchmentMC'
         url = 'https://maven.parchmentmc.org'
     }
