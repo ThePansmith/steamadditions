@@ -18,19 +18,12 @@ public class SAGTAddon implements IGTAddon {
 
     @Override
     public void initializeAddon() {
-
     }
 
     @Override
     public String addonModId() {
         return steamadditions.MOD_ID;
     }
-
-    @Override
-    public void collectMaterialCasings(MaterialCasingCollectionEvent event) {
-        IGTAddon.super.collectMaterialCasings(event);
-    }
-
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
         SARecipes.init(provider);
